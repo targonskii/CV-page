@@ -1,2 +1,0 @@
-# cv-page
-My CV
