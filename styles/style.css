@@ -506,8 +506,6 @@ main li {
     width: 50px;
     height: 50px;
     margin: -15px -25px 0 -25px;
-    background-color: var(--white);
-    border-radius: 50%;
 }
 
 .carousel > label:after {
@@ -518,12 +516,14 @@ main li {
     left: 0;
     content: '';
     background-image: url('../images/arrow.png');
-    rotate: 180deg;
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
 }
 
 .carousel > input:checked ~ label ~ label ~ label:after {
     right: 0;
     content: '';
+    background-repeat: no-repeat;
     background-image: url('../images/arrow.png');
 }
 
@@ -549,5 +549,15 @@ main li {
 
     .carousel > label:after {
         margin: -15px 3px 0 3px;
+        background-color: var(--purple);
+        border-radius: 50%;
+    }
+
+    .carousel > input:checked + label:after {
+        background-image: url('../images/arrow_mobile.png');
+    }
+
+    .carousel > input:checked ~ label ~ label ~ label:after {
+        background-image: url('../images/arrow_mobile.png');
     }
 }
