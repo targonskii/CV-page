@@ -356,13 +356,13 @@ main li {
         display: none;
         padding: 10px 15px;
         color: var(--white);
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .main__list-mobile li {
         margin-bottom: 20px;
         padding-left: 40px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .main__stack {
