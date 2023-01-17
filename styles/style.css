@@ -438,7 +438,8 @@ main li {
     padding: 40px;
 }
 
-.footer h2 {
+.footer h3 {
+    display: block;
     text-align: center;
     font-size: 30px;
     margin-bottom: 25px;
@@ -446,12 +447,13 @@ main li {
 
 .carousel {
     position: relative;
+    height: 550px;
 }
 
 .carousel img {
     display: none;
     max-width: 100%;
-    max-height: 550px;
+    height: 550px;
     margin: 0 auto;
     border-radius: var(--radius);
 }
@@ -501,15 +503,10 @@ main li {
     display: block;
     position: absolute;
     top: 50%;
-    width: 44px;
-    height: 44px;
-    margin: -15px 25px 0 25px;
-    background-color: var(--beige);
-    color: var(--white);
-    font-weight: bold;
-    font-size: 32px;
-    text-align: center;
-    visibility: hidden;
+    width: 50px;
+    height: 50px;
+    margin: -15px -25px 0 -25px;
+    background-color: var(--white);
     border-radius: 50%;
 }
 
@@ -519,12 +516,15 @@ main li {
 
 .carousel > input:checked + label:after {
     left: 0;
-    content: '\21E6';
+    content: '';
+    background-image: url('../images/arrow.png');
+    rotate: 180deg;
 }
 
 .carousel > input:checked ~ label ~ label ~ label:after {
     right: 0;
-    content: '\21E8';
+    content: '';
+    background-image: url('../images/arrow.png');
 }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {
@@ -532,15 +532,22 @@ main li {
         margin: 10px auto 0px;
         padding: 20px;
     }
-    .footer h2 {
+    .footer h3 {
         font-size: 25px;
         margin: 0px auto 20px;
     }
 
+    .carousel {
+        position: relative;
+        height: 232px;
+    }
+
+    .carousel img {
+        max-width: 100%;
+        height: 232px;
+    }
+
     .carousel > label:after {
-        width: 44px;
-        height: 44px;
         margin: -15px 3px 0 3px;
-        font-size: 32px;
     }
 }
